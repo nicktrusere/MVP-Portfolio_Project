@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mobile RAN performance Tracker</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h1>Mobile Network Performance Tracker</h1>
+			</div>
+		</header>
+		<div>
+			<ul>
+				<h3>Site_name</h3>
+				<h4>coordinates</h4>
+				<h3>technology</h3>
+				<li>
+				<h2>{{ site.name }}:</h2>
+				<ul>
+					{% for site in sites|sort(attributes='name') %}
+					 <li>{{ site.name }}</li>
+					{% endfor %}
+				</ul>
+				{% endfor %}
+			</ul>
+		</div>
+		</header>
+	</body>
+</html>
